@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the accompanying work and this repository."
+type: software
+title: "Chunk-Level SAEs: Beyond Token Scale"
+authors:
+  - family-names: Wang
+    given-names: Xu
+  - family-names: Yang
+    given-names: Yifan
+  - family-names: Yu
+    given-names: Tinghao
+  - family-names: Zou
+    given-names: Difan
+version: 0.1.0
+repository-code: "https://github.com/Xu0615/Chunk_Level_SAE"
+url: "https://github.com/Xu0615/Chunk_Level_SAE"
+abstract: "Research implementation for Beyond Token Scale: Chunk-Level Sparse Autoencoders for Reliable Semantic Feature Discovery."
+keywords:
+  - sparse autoencoders
+  - interpretability
+  - representation learning

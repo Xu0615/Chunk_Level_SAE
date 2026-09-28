@@ -1,0 +1,40 @@
+# Python and development environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+build/
+dist/
+# Model weights, activation caches, training outputs, and local data
+models/
+qwen/
+data/
+outputs/
+.cache/
+checkpoints/
+runs/
+*.safetensors
+*.pt
+*.pth
+*.bin
+*.parquet
+*.npz
+*.npy
+*.jsonl
+*.log
+# Machine-specific configuration and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+# OS/editor files
+.DS_Store
+__MACOSX/
+.idea/
+.vscode/

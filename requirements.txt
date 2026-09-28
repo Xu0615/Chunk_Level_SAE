@@ -1,0 +1,3 @@
+# Core dependencies are defined once, in pyproject.toml.
+# Install your CUDA-compatible PyTorch build first for GPU training.
+-e .

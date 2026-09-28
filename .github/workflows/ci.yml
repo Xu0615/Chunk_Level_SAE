@@ -1,0 +1,39 @@
+name: CPU checks
+on:
+  push:
+    branches: [main]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  cpu:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      OMP_NUM_THREADS: "2"
+      MKL_NUM_THREADS: "2"
+      MPLBACKEND: Agg
+      TOKENIZERS_PARALLELISM: "false"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install CPU environment
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install torch --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install -e '.[dev]'
+      - name: Check Python and shell entry points
+        run: |
+          python -m compileall -q src examples
+          for file in run_scripts/*.sh src/*.sh; do bash -n "$file"; done
+          python src/train_chunk_saes.py --help > /dev/null
+          python src/extract_streaming_chunk_activations.py --help > /dev/null
+      - name: Run tests
+        run: python -m pytest -q
+      - name: Run synthetic training example
+        run: python examples/train_synthetic.py --steps 12 --output-dir /tmp/chunk-sae-example
+      - name: Build the Python package
+        run: python -m build

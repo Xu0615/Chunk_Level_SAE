@@ -1,0 +1,51 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "chunk-saes"
+version = "0.1.0"
+description = "Chunk-level sparse autoencoders for reliable semantic feature discovery"
+readme = "README.md"
+requires-python = ">=3.12"
+authors = [
+  {name = "Xu Wang"},
+  {name = "Yifan Yang"},
+  {name = "Tinghao Yu"},
+  {name = "Difan Zou"},
+]
+keywords = ["sparse-autoencoder", "mechanistic-interpretability", "representation-learning", "chunk-level-sae"]
+dependencies = [
+  "torch>=2.6",
+  "numpy>=1.26",
+  "transformers==5.14.1",
+  "datasets>=4.0.0",
+  "safetensors>=0.6.2",
+  "scikit-learn>=1.7.0",
+  "scipy>=1.14.0",
+  "zstandard>=0.25.0",
+  "sentencepiece>=0.2.0",
+  "matplotlib>=3.10.0",
+  "tensorboard==2.19.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "build>=1.2"]
+cuda = ["flash-linear-attention==0.5.2", "causal-conv1d>=1.5.2"]
+spark = ["pyspark>=3.5"]
+
+[project.urls]
+Repository = "https://github.com/Xu0615/Chunk_Level_SAE"
+Documentation = "https://github.com/Xu0615/Chunk_Level_SAE/tree/main/docs"
+Issues = "https://github.com/Xu0615/Chunk_Level_SAE/issues"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["chunk_saes*", "evals*", "motivation*"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

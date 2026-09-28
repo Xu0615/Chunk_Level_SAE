@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="400" viewBox="0 0 1200 400" role="img" aria-labelledby="title desc">
+<title id="title">Three objectives, one chunk-pair protocol</title><desc id="desc">Independently encode adjacent chunks A and B, then pool each. Mean reconstructs A; Cross predicts B; Joint reconstructs A with the full dictionary and predicts B with its shared prefix.</desc>
+<rect x="0" y="0" width="1200" height="400" rx="16" fill="#F3F7FA" />
+<g font-family="Arial, Helvetica, sans-serif">
+<text x="32" y="40" font-size="14" fill="#456677" font-weight="700" letter-spacing="1">ONE CHUNK-PAIR PROTOCOL · THREE COMPLEMENTARY OBJECTIVES</text>
+<rect x="32" y="63" width="268" height="48" rx="8" fill="#E2EBEF" />
+<text x="49" y="93" font-size="18" fill="#25475A" font-weight="600" >Adjacent text chunks A | B</text>
+<path d="M317 87 H354 m-6 -5 6 5 -6 5" stroke="#7494A3" stroke-width="2" fill="none"/>
+<rect x="371" y="63" width="432" height="48" rx="8" fill="#E2EBEF" />
+<text x="391" y="93" font-size="18" fill="#25475A" font-weight="600" >Independent forward passes + mean pooling</text>
+<path d="M820 87 H857 m-6 -5 6 5 -6 5" stroke="#7494A3" stroke-width="2" fill="none"/>
+<rect x="874" y="63" width="294" height="48" rx="8" fill="#E2EBEF" />
+<text x="902" y="93" font-size="18" fill="#25475A" font-weight="600" >Chunk means μA and μB</text>
+<rect x="32" y="135" width="368" height="237" rx="12" fill="#FFFFFF" stroke="#D8E3E9"/>
+<rect x="52" y="157" width="5" height="24" rx="2" fill="#0D827E" />
+<text x="69" y="178" font-size="24" fill="#163B50" font-weight="700" >Mean-Chunk</text>
+<text x="52" y="207" font-size="16" fill="#577180" font-weight="400" >Represent the current span</text>
+<rect x="52" y="234" width="73" height="48" rx="8" fill="#E7F6F2" />
+<text x="69" y="265" font-size="22" fill="#0D827E" font-weight="600" >μA</text>
+<path d="M135 258 H171 m-6 -5 6 5 -6 5" stroke="#9AAFBC" stroke-width="1.7" fill="none"/>
+<rect x="185" y="240" width="8" height="37" rx="3" fill="#E0E8EE" />
+<rect x="199" y="240" width="8" height="37" rx="3" fill="#0D827E" />
+<rect x="213" y="240" width="8" height="37" rx="3" fill="#E0E8EE" />
+<rect x="227" y="240" width="8" height="37" rx="3" fill="#0D827E" />
+<rect x="241" y="240" width="8" height="37" rx="3" fill="#E0E8EE" />
+<path d="M263 258 H297 m-6 -5 6 5 -6 5" stroke="#9AAFBC" stroke-width="1.7" fill="none"/>
+<rect x="308" y="234" width="72" height="48" rx="8" fill="#E7F6F2" />
+<text x="321" y="265" font-size="22" fill="#0D827E" font-weight="600" >μA</text>
+<text x="52" y="333" font-size="16" fill="#456677" font-weight="400" >Own mean reconstruction</text>
+<rect x="422" y="135" width="368" height="237" rx="12" fill="#FFFFFF" stroke="#D8E3E9"/>
+<rect x="442" y="157" width="5" height="24" rx="2" fill="#5C65B0" />
+<text x="459" y="178" font-size="24" fill="#163B50" font-weight="700" >Cross-Chunk</text>
+<text x="442" y="207" font-size="16" fill="#577180" font-weight="400" >Predict the adjacent span</text>
+<rect x="442" y="234" width="73" height="48" rx="8" fill="#EDF0FF" />
+<text x="459" y="265" font-size="22" fill="#5C65B0" font-weight="600" >μA</text>
+<path d="M525 258 H561 m-6 -5 6 5 -6 5" stroke="#9AAFBC" stroke-width="1.7" fill="none"/>
+<rect x="575" y="240" width="8" height="37" rx="3" fill="#E0E8EE" />
+<rect x="589" y="240" width="8" height="37" rx="3" fill="#5C65B0" />
+<rect x="603" y="240" width="8" height="37" rx="3" fill="#E0E8EE" />
+<rect x="617" y="240" width="8" height="37" rx="3" fill="#5C65B0" />
+<rect x="631" y="240" width="8" height="37" rx="3" fill="#E0E8EE" />
+<path d="M653 258 H687 m-6 -5 6 5 -6 5" stroke="#9AAFBC" stroke-width="1.7" fill="none"/>
+<rect x="698" y="234" width="72" height="48" rx="8" fill="#EDF0FF" />
+<text x="711" y="265" font-size="22" fill="#5C65B0" font-weight="600" >μB</text>
+<text x="442" y="333" font-size="16" fill="#456677" font-weight="400" >Both directions: A → B, B → A</text>
+<rect x="812" y="135" width="368" height="237" rx="12" fill="#FFFFFF" stroke="#D8E3E9"/>
+<rect x="832" y="157" width="5" height="24" rx="2" fill="#A86820" />
+<text x="849" y="178" font-size="24" fill="#163B50" font-weight="700" >Joint-Chunk</text>
+<text x="832" y="207" font-size="16" fill="#577180" font-weight="400" >Learn both with shared atoms</text>
+<rect x="833" y="237" width="15" height="35" rx="3" fill="#45B3A5" />
+<rect x="856" y="237" width="15" height="35" rx="3" fill="#45B3A5" />
+<rect x="879" y="237" width="15" height="35" rx="3" fill="#45B3A5" />
+<rect x="902" y="237" width="15" height="35" rx="3" fill="#45B3A5" />
+<rect x="925" y="237" width="15" height="35" rx="3" fill="#45B3A5" />
+<rect x="948" y="237" width="15" height="35" rx="3" fill="#45B3A5" />
+<rect x="971" y="237" width="15" height="35" rx="3" fill="#45B3A5" />
+<rect x="994" y="237" width="15" height="35" rx="3" fill="#98A6D3" />
+<rect x="1017" y="237" width="15" height="35" rx="3" fill="#98A6D3" />
+<rect x="1040" y="237" width="15" height="35" rx="3" fill="#98A6D3" />
+<rect x="1063" y="237" width="15" height="35" rx="3" fill="#98A6D3" />
+<rect x="1086" y="237" width="15" height="35" rx="3" fill="#98A6D3" />
+<rect x="1109" y="237" width="15" height="35" rx="3" fill="#98A6D3" />
+<rect x="1132" y="237" width="15" height="35" rx="3" fill="#98A6D3" />
+<text x="832" y="301" font-size="16" fill="#456677" font-weight="400" >Full dictionary → own mean</text>
+<text x="832" y="331" font-size="16" fill="#0D827E" font-weight="400" >Shared prefix → adjacent mean</text>
+</g></svg>

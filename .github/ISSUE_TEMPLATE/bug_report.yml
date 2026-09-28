@@ -1,0 +1,31 @@
+name: Bug report
+description: Report a reproducible training, cache, or evaluation problem.
+title: "[Bug] "
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Expected and observed behavior
+      description: Explain which stage failed and what you expected.
+    validations:
+      required: true
+  - type: textarea
+    id: command
+    attributes:
+      label: Reproduction command and configuration
+      description: Include mode, model/layer, GPU count, cache world size, occurrence budget, global batch size, and steps. Remove secrets.
+      render: shell
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: OS, Python, PyTorch, Transformers, GPU model, and driver/CUDA version.
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant traceback or logs
+      render: text
