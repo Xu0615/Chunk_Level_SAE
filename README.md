@@ -9,12 +9,13 @@
 **Xu Wang**<sup>1,2</sup> · **Yifan Yang**<sup>2</sup> · **Tinghao Yu**<sup>2</sup> · **Difan Zou**<sup>1</sup><br>
 <sup>1</sup>The University of Hong Kong &nbsp; <sup>2</sup>Tencent
 
+[![arXiv](https://img.shields.io/badge/arXiv-2609.35521-b31b1b)](https://arxiv.org/abs/2609.35521)
 [![CPU checks](https://github.com/Xu0615/Chunk_Level_SAE/actions/workflows/ci.yml/badge.svg)](https://github.com/Xu0615/Chunk_Level_SAE/actions/workflows/ci.yml)
 [![Python](https://img.shields.io/badge/Python-3.12%2B-3776AB?logo=python&logoColor=white)](https://www.python.org/downloads/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.6%2B-EE4C2C?logo=pytorch&logoColor=white)](https://pytorch.org/)
 [![中文指南](https://img.shields.io/badge/训练指南-中文-0C7C86)](docs/training_zh.md)
 
-[Quick start](#quick-start) · [Training guide](docs/training.md) · [Methods](docs/methods.md) · [Evaluation](docs/evaluation.md) · [Citation](#citation)
+[Paper](https://arxiv.org/abs/2609.35521) · [Quick start](#quick-start) · [Training guide](docs/training.md) · [Methods](docs/methods.md) · [Evaluation](docs/evaluation.md) · [Citation](#citation)
 
 </div>
 
@@ -202,17 +203,23 @@ Legacy top-level evaluation scripts in `src/` remain as compatibility entry poin
 | [Evaluation](docs/evaluation.md) | Available tasks, required inputs, RFVE reference construction |
 | [Contributing](CONTRIBUTING.md) | Development checks and experiment reporting |
 
+## Acknowledgments
+
+We thank the authors and contributors of [dictionary_learning](https://github.com/saprmarks/dictionary_learning) for openly sharing their sparse autoencoder implementations and training tools with the research community.
+
 ## Citation
 
-If you use this implementation, please cite the repository. The bibliographic metadata is also available in [CITATION.cff](CITATION.cff); a paper-specific citation can be added when its public identifier is available.
+If you find this work useful, please cite our [paper](https://arxiv.org/abs/2609.35521). The preferred citation is also available through GitHub's **Cite this repository** menu via [CITATION.cff](CITATION.cff).
 
 ```bibtex
-@misc{wang2026chunklevelsaes,
-  author       = {Xu Wang and Yifan Yang and Tinghao Yu and Difan Zou},
-  title        = {Chunk-Level Sparse Autoencoders: Beyond Token Scale},
-  year         = {2026},
-  howpublished = {GitHub repository},
-  url          = {https://github.com/Xu0615/Chunk_Level_SAE}
+@misc{wang2026tokenscalechunklevelsparse,
+  title         = {Beyond Token Scale: Chunk-Level Sparse Autoencoders for Reliable Semantic Feature Discovery},
+  author        = {Xu Wang and Yifan Yang and TingHao YU and Difan Zou},
+  year          = {2026},
+  eprint        = {2609.35521},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CL},
+  url           = {https://arxiv.org/abs/2609.35521},
 }
 ```
 
