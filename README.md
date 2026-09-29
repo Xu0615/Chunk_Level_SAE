@@ -223,4 +223,4 @@ If you find this work useful, please cite our [paper](https://arxiv.org/abs/2609
 }
 ```
 
-For research questions, contact [Xu Wang](mailto:sunny615@connect.hku.hk) or [Difan Zou](mailto:dzou@hku.hk). For reproducible code issues, please [open an issue](https://github.com/Xu0615/Chunk_Level_SAE/issues).
+For research questions and cooperation, please contact [Xu Wang](mailto:sunny615@connect.hku.hk). 
